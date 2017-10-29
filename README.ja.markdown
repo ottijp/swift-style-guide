@@ -9,7 +9,7 @@
 ## 目次
 
 * [正確さ](#correctness)
-* [Naming](#naming)
+* [命名](#naming)
   * [Prose](#prose)
   * [Delegates](#delegates)
   * [Use Type Inferred Context](#use-type-inferred-context)
@@ -55,35 +55,35 @@
 
 コンパイルの警告はできるだけ解決するように努力してください．このルールは，文字列リテラルではなく `#selector` タイプを使うこと，などの多くの情報を与えてくれます．
 
-## Naming
+## <a name="naming"></a>命名
 
-Descriptive and consistent naming makes software easier to read and understand. Use the Swift naming conventions described in the [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/). Some key takeaways include:
+説明的で一貫性のある命名をすることで，コードが読みやすく理解しやすくなります．[API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)に記載されいている慣習的な命名規則に従うようにしましょう．以下に主要なものをあげます．
 
-- striving for clarity at the call site
-- prioritizing clarity over brevity
-- using camel case (not snake case)
-- using uppercase for types (and protocols), lowercase for everything else
-- including all needed words while omitting needless words
-- using names based on roles, not types
-- sometimes compensating for weak type information
-- striving for fluent usage
-- beginning factory methods with `make`
-- naming methods for their side effects
-  - verb methods follow the -ed, -ing rule for the non-mutating version
-  - noun methods follow the formX rule for the mutating version
-  - boolean types should read like assertions
-  - protocols that describe _what something is_ should read as nouns
-  - protocols that describe _a capability_ should end in _-able_ or _-ible_
-- using terms that don't surprise experts or confuse beginners
-- generally avoiding abbreviations
-- using precedent for names
-- preferring methods and properties to free functions
-- casing acronyms and initialisms uniformly up or down
-- giving the same base name to methods that share the same meaning
-- avoiding overloads on return type
-- choosing good parameter names that serve as documentation
-- labeling closure and tuple parameters
-- taking advantage of default parameters
+- 呼び出し側から見て明瞭であるように努める
+- 簡潔さよりも明瞭さを優先する
+- （スネークケースではなく）キャメルケースを使う
+- 型（とプロトコル）には大文字始まりを使い，その他は小文字始まりを使う
+- 不必要な単語は省略し，必要な単語をすべて含める
+- 型ではなく役割に応じた名前を付ける
+- 場合によっては弱い型の情報を補完する
+- 流れるように使えるように務める
+- ファクトリメソッドは `make` から始める
+- 副作用に応じた名前を付ける
+  - 動詞名メソッドは，変化を起こさない場合には -ed, -ing ルールに従う
+  - 名詞名メソッドは，変化を起こす場合には formX ルールに従う
+  - boolean型は断定的に読める表現にする
+  - _何であるか_ を表すプロトコルは名詞名にする
+  - _できること_ を表すプロトコルは _-able_ か _-idle_ で終わる名前にする
+- 上級者を驚かせず，初学者を混乱させない用語を用いる
+- 一般的には省略計を避ける
+- 慣習的な名前を使う
+- フリーな関数よりもメソッドとプロパティを使う
+- 頭文字の大文字小文字は合わせる
+- 同じ意味を持つメソッドには同じ基底名を付ける
+- 戻り値の違いのみのオーバロードは避ける
+- ドキュメントの代わりになる良いパラメータ名を選ぶ
+- クロージャやタプルのパラメータにラベルを付ける
+- デフォルトパラメータの利点を活かす
 
 ### Prose
 
